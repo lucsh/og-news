@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+
+import './tailwind.output.css';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Inicio from './components/Inicio';
+import Seccion from './components/Seccion';
+import Noticia from './components/Noticia';
+import Nav from './components/Nav';
+import SubHeader from './components/SubHeader';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Router>
+        <Nav />
+        <SubHeader />
+        <div className="lg:container lg:mx-auto bg-white p-4">
+          <Switch>
+            <Route exact path="/">
+              <Inicio />
+            </Route>
+            <Route path="/:seccion">
+              <Seccion />
+            </Route>
+            <Route path="/:seccion/:noticia">
+              <Noticia />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
