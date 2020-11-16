@@ -2,6 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background: #f8f8f8;
+body {
+    @apply bg-body;
 }
+
+/* Custom */
+
+.-m-2 {
+    margin: -0.5em;
+}
+
+.-m-3 {
+    margin: -0.75em;
+}
+
+.-m-4 {
+    margin: -1em;
+}
+
+.-m-5 {
+    margin: -1.25em;
+}
+
+.-m-6 {
+    margin: -1.5em;
+}
+
+.-m-7 {
+    margin: -1.75em;
+}
+
+.-m-8 {
+    margin: -2em;
+}
+
+.-ml-1 {
+    margin-left: -0.25em;
+}
+
+.-ml-2 {
+    margin-left: -0.5em;
+}
+
+.-ml-3 {
+    margin-left: -0.75em;
+}
+
+.-ml-4 {
+    margin-left: -1em;
+}
+
+.-ml-5 {
+    margin-left: -1.25em;
+}
+
+.-ml-6 {
+    margin-left: -1.5em;
+}
+
+.-ml-7 {
+    margin-left: -1.75em;
+}
+
+.-ml-8 {
+    margin-left: -2em;
+}
+
+/* Noticias */
+.titulo {
+    @apply text-black font-serif font-black tracking-tighter;
+}
+
+.copete {
+    @apply text-black font-sans tracking-tight;
+    hyphens: auto;
+}
+
+.fecha {
+    @apply text-black font-sans tracking-tight my-2;
+}
+
+.copete b {
+    @apply font-black
+}
+
+.categoria {
+    @apply text-sm text-black font-sans tracking-tight font-black mx-2 uppercase
+}
+
+.cuerpo p {
+    hyphens: auto;
+}
+
+/* Grilla Articulos */

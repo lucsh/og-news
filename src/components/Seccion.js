@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Seccion({ seccion }) {
-  return <div>{seccion}</div>;
+  return <seccion>{seccion} hola</seccion>;
 }
 
 export default Seccion;

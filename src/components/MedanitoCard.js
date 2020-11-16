@@ -63,7 +63,7 @@ function MedanitoCard() {
       <div className="font-bold">MEDANITO</div>
 
       <div className="flex flex-col md:flex-row">
-        <div className="p-4 w-full md:w-1/2 ">
+        <div className="p-4 w-full hidden md:block md:w-1/2 ">
           <TinyLineChart data={graphData} color={color} />
         </div>
         <div className="flex flex-col w-1/2 mt-auto self-end sm:w-full">
@@ -76,7 +76,9 @@ function MedanitoCard() {
           </div>
         </div>
       </div>
-      <div className="w-full text-xs text-right text-gray-500">{dayjs.unix(data?.time).format('DD-MM-YYYY')}</div>
+      <div className="hidden md:block w-full text-xs text-left text-gray-500">
+        {dayjs.unix(data?.time).format('DD-MM-YYYY')}
+      </div>
     </div>
   );
 }

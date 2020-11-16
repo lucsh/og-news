@@ -5,7 +5,6 @@ import config from '../config';
 
 import * as dayjs from 'dayjs';
 import 'dayjs/locale/es';
-import axios from 'axios';
 const { eiaApiKey } = config;
 
 function SubHeader() {
@@ -18,7 +17,7 @@ function SubHeader() {
   }, []);
 
   return (
-    <div className="w-screen bg-body flex flex-row justify-between p-4">
+    <div className="w-screen bg-body flex flex-col md:flex-row justify-between p-4">
       <div>{date}</div>
       <div className="flex flex-row">
         <PriceCard

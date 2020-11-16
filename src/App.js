@@ -9,8 +9,9 @@ import Seccion from './components/Seccion';
 import Noticia from './components/Noticia';
 import Nav from './components/Nav';
 import SubHeader from './components/SubHeader';
+import Footer from './components/Footer';
 
-function App() {
+function App(props) {
   return (
     <div className="">
       <Router>
@@ -21,14 +22,15 @@ function App() {
             <Route exact path="/">
               <Inicio />
             </Route>
-            <Route path="/:seccion">
+            <Route exact path="/:seccion">
               <Seccion />
             </Route>
             <Route path="/:seccion/:noticia">
-              <Noticia />
+              <Noticia {...props} />
             </Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
     </div>
   );
